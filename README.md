@@ -1,6 +1,6 @@
 # lita-whats-brad-eating
 
-[![Build Status](https://travis-ci.org/dpritchett/lita-whats-brad-eating.svg?branch=master)](https://travis-ci.org/dpritchett/lita-whats-brad-eating)
+[![Build Status](https://travis-ci.org/dpritchett/lita-whats-brad-eating.svg?branch=master)](https://travis-ci.org/dpritchett/lita-whats-brad-eating) [![Gem Version](https://badge.fury.io/rb/lita-whats-brad-eating.svg)](https://badge.fury.io/rb/lita-whats-brad-eating)
 
 photos from a tumblr food journal for your lita.io chatbot
 
@@ -9,7 +9,7 @@ photos from a tumblr food journal for your lita.io chatbot
 Add lita-whats-brad-eating to your Lita instance's Gemfile:
 
 ``` ruby
-gem 'lita-whats-brad-eating', github: 'dpritchett/lita-whats-brad-eating'
+gem 'lita-whats-brad-eating'
 ```
 
 ## Usage

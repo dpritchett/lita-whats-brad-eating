@@ -1,6 +1,6 @@
 # lita-whats-brad-eating
 
-[![Build Status](https://travis-ci.org/dpritchett/lita-whats-brad-eating.svg?branch=master)](https://travis-ci.org/dpritchett/lita-whats-brad-eating) [![Gem Version](https://badge.fury.io/rb/lita-whats-brad-eating.svg)](https://badge.fury.io/rb/lita-whats-brad-eating)
+[![Build Status](https://travis-ci.org/dpritchett/lita-whats-brad-eating.svg?branch=master)](https://travis-ci.org/dpritchett/lita-whats-brad-eating) [![Gem Version](https://badge.fury.io/rb/lita-whats-brad-eating.svg)](https://badge.fury.io/rb/lita-whats-brad-eating) [![Coverage Status](https://coveralls.io/repos/github/dpritchett/lita-whats-brad-eating/badge.svg?branch=master)](https://coveralls.io/github/dpritchett/lita-whats-brad-eating?branch=master)
 
 photos from a tumblr food journal for your lita.io chatbot
 

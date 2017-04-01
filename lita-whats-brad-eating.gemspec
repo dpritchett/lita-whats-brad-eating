@@ -23,5 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rack-test"
   spec.add_development_dependency "rspec", ">= 3.0.0"
-  spec.add_development_dependency "vcr"
+  spec.add_development_dependency "vcr", "~> 3.0.3"
+  spec.add_development_dependency "coveralls", "~> 0.8.20"
+  spec.add_development_dependency "faraday", "~> 0.11.0"
 end

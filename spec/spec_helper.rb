@@ -1,3 +1,6 @@
+require 'coveralls'
+Coveralls.wear!
+
 require "lita-whats-brad-eating"
 require "lita/rspec"
 

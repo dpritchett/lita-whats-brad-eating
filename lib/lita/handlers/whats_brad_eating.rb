@@ -9,20 +9,31 @@ module Lita
         command: true,
         help: { "what's brad eating" => "latest post from brad's food tumblr" }
 
+      BLOG_URL = 'https://whatsbradeating.tumblr.com'
+
+      def response
+        @_response ||= http.get(BLOG_URL)
+      end
+
+      def parsed_response
+        Nokogiri.parse(response.body)
+      end
+
+      def first_post
+        parsed_response.css("#posts .post").first
+      end
+
+      def caption
+        image.attributes.fetch('alt')
+      end
+
+      def image
+        first_post.css(".photo-wrapper img").first
+      end
 
       def brad_eats(response)
-        blog_url = 'https://whatsbradeating.tumblr.com'
-
-        res = http.get(blog_url)
-        noked = Nokogiri.parse(res.body)
-
-        post = noked.css("#posts .post").first
-
-        caption = post.css(".caption").first
-        img = post.css(".photo-wrapper img").first
-
         caption_text = caption.text.strip
-        img_url = img.get_attribute('src')
+        img_url = image.get_attribute('src')
 
         msg = "#{caption_text} >> #{img_url}"
 

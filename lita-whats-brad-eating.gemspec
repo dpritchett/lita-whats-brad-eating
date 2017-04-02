@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'lita-whats-brad-eating'
-  spec.version       = '0.1.2'
+  spec.version       = '1.0.0'
   spec.authors       = ['Daniel J. Pritchett']
   spec.email         = ['dpritchett@gmail.com']
   spec.description   = "show brad's food"

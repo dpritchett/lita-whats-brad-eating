@@ -10,8 +10,10 @@ describe Lita::Handlers::WhatsBradEating, lita_handler: true, vcr: true do
   describe 'routes' do
     it { is_expected.to route("Lita what's brad eating") }
     it { is_expected.to route("Lita what's BRAD eating") }
+    it { is_expected.to route("Lita what’s BRAD eating") }
   end
 
+  # START:response
   describe ':response' do
     let(:body) { subject.response.body }
 
@@ -27,7 +29,9 @@ describe Lita::Handlers::WhatsBradEating, lita_handler: true, vcr: true do
       expect(body.include?('caption')).to be_truthy
     end
   end
+  # END:response
 
+  # START:parsed_response
   describe ':parsed_response' do
     it 'should return a nokogiri object with a :css method we can search on' do
       expect(subject.parsed_response).to respond_to(:css)
@@ -36,6 +40,7 @@ describe Lita::Handlers::WhatsBradEating, lita_handler: true, vcr: true do
       expect(images.any?).to be_truthy
     end
   end
+  # END:parsed_response
 
   describe ':first_post' do
     it 'finds exactly one node' do
@@ -47,6 +52,7 @@ describe Lita::Handlers::WhatsBradEating, lita_handler: true, vcr: true do
     end
   end
 
+  # START:image
   describe ':image' do
     it 'finds at least one node' do
       attributes = subject.image.attributes
@@ -56,11 +62,14 @@ describe Lita::Handlers::WhatsBradEating, lita_handler: true, vcr: true do
       expect(attributes.key?('alt')).to be_truthy
     end
   end
+  # END:image
 
+  # START:brad_eats
   describe ':brad_eats' do
     it 'responds with a caption and an image URL' do
       send_message "Lita what's brad eating"
       expect(replies.last).to match(/\w+ >> http/i)
     end
   end
+  # END:brad_eats
 end
